@@ -17,10 +17,10 @@ move "C:\Program Files (x86)\Windows Kits\10\Debuggers\x86\winext\pykd.dll" "C:\
 
 # install python2.7
 
-echo "[+] installing python2.7"
-copy "$share_path\python-2.7.17.msi" $install_dir
-msiexec.exe /i $install_dir\python-2.7.17.msi /qn
-start-sleep 10
+#echo "[+] installing python2.7"
+#copy "$share_path\python-2.7.17.msi" $install_dir
+#msiexec.exe /i $install_dir\python-2.7.17.msi /qn
+#start-sleep 10
 
 # register Python2.7 binaries in path before Python3
 echo "[+] adding python2.7 to the PATH"
