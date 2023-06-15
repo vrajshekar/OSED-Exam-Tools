@@ -35,7 +35,7 @@ copy "$share_path\pykd.pyd" "C:\Program Files (x86)\Windows Kits\10\Debuggers\x8
 
 # register runtime debug dll
 echo "[+] registering runtime debug dll"
-cd "C:\Program Files\Common Files\Microsoft Shared\VC"
+cd "C:\Program Files (x86)\Common Files\Microsoft Shared\VC"
 regsvr32 /s msdia90.dll
 
 echo "[=] in case you see something about symbols when running mona, try executing the following (the runtime took too long to install)"
