@@ -10,7 +10,7 @@ echo "[+] installing old c++ runtime"
 copy "$share_path\vcredist_x86.exe" $install_dir
 cd $install_dir
 .\vcredist_x86.exe
-Start-Sleep 180
+Start-Sleep 90
 
 echo "[+] backing up old pykd files"
 move "$program_files\Windows Kits\10\Debuggers\x86\winext\pykd.pyd" "$program_files\Windows Kits\10\Debuggers\x86\winext\pykd.pyd.bak"
@@ -19,7 +19,7 @@ move "$program_files\Windows Kits\10\Debuggers\x86\winext\pykd.dll" "$program_fi
 # install python2.7
 copy "$share_path\python-2.7.17.msi" $install_dir
 msiexec.exe /i $install_dir\python-2.7.17.msi /qn
-start-sleep 180
+start-sleep 60
 
 # register Python2.7 binaries in path before Python3
 echo "[+] adding python2.7 to the PATH"
