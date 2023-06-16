@@ -5,11 +5,11 @@ echo "[+] creating installation directory: $install_dir"
 mkdir $install_dir
 
 # install old c++ runtime
-#echo "[+] installing old c++ runtime"
-#copy "$share_path\vcredist_x64.exe" $install_dir
-#cd $install_dir
-#.\vcredist_x64.exe 
-#start-sleep 10
+echo "[+] installing old c++ runtime"
+copy "$share_path\vcredist_x64.exe" $install_dir
+cd $install_dir
+.\vcredist_x64.exe 
+start-sleep 10
 
 echo "[+] backing up old pykd files"
 move "C:\Program Files (x86)\Windows Kits\10\Debuggers\x86\winext\pykd.pyd" "C:\Program Files (x86)\Windows Kits\10\Debuggers\x86\winext\pykd.pyd.bak"
@@ -17,10 +17,10 @@ move "C:\Program Files (x86)\Windows Kits\10\Debuggers\x86\winext\pykd.dll" "C:\
 
 # install python2.7
 
-#echo "[+] installing python2.7"
-#copy "$share_path\python-2.7.17.msi" $install_dir
-#msiexec.exe /i $install_dir\python-2.7.17.msi /qn
-#start-sleep 10
+echo "[+] installing python2.7"
+copy "$share_path\python-2.7.17.msi" $install_dir
+msiexec.exe /i $install_dir\python-2.7.17.msi /qn
+start-sleep 10
 
 # register Python2.7 binaries in path before Python3
 echo "[+] adding python2.7 to the PATH"
