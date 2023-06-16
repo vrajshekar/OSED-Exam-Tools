@@ -6,9 +6,9 @@ mkdir $install_dir
 
 # install old c++ runtime
 echo "[+] installing old c++ runtime"
-copy "$share_path\vcredist.exe" $install_dir
+copy "$share_path\vcredist_x86.exe" $install_dir
 cd $install_dir
-.\vcredist.exe 
+.\vcredist_x86.exe 
 start-sleep 10
 
 echo "[+] backing up old pykd files"
